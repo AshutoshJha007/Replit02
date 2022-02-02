@@ -1,7 +1,7 @@
 console.log(mergeSortArrays([0,3,4,31], [4,6,30]));
 //[0,3,4,4,6,30,31]
 console.log(mergeSortArrays([4,6,30],[0,3,4,31]));
-console.log(mergeSortArrays([4],[0,3,4,31]));
+console.log(mergeSortArrays([],[0,3,4,31]));
 
 function mergeSortArrays(arry1, arry2){
   const totalLength = arry1.length + arry2.length;
