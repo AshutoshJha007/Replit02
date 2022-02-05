@@ -33,17 +33,27 @@ class HashTable {
   }
 
   keys(){
-    let keysArray =[];
-    for(let i=0; i<this.data.length;i++){
-      if(this.data[i]){
-        keysArray.push(this.data[i][0][0]);
+    if(!this.data.length){
+      return undefined;
+    }
+    let keysArray = [];
+    for(let i=0;i<this.data.length;i++){
+      if(this.data[i] && this.data[i].length){
+        if(this.data[i].length > 1){
+          for(let j=0;j<this.data[i].length;j++){
+            keysArray.push(this.data[i][j][0]);
+          }
+        }else{
+          keysArray.push(this.data[i][0][0]);
+        }
       }
     }
     return keysArray;
   }
+
 }
 
-const basket = new HashTable(60);
+const basket = new HashTable(30);
 basket._hash('grapes');
 basket.set('grapes',100);
 basket.set('apple',50);
