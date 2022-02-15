@@ -66,8 +66,10 @@ myStack.push("udemy");
 myStack.push("discord");
 console.log(myStack.isEmpty());
 console.log(myStack)
+console.log(myStack.peek());
 myStack.pop();
 myStack.pop();
 myStack.pop();
 console.log(myStack);
 console.log(myStack.isEmpty());
+console.log(myStack.peek());
