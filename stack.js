@@ -32,7 +32,7 @@ class Stack{
     if(!this.top){
       this.bottom = newNode;
       this.top = this.bottom;
-      this.top.next = this.bottom;
+      //this.top.next = this.bottom;
     }else{
       const oldTop = this.top;
       this.top = newNode;
