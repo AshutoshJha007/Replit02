@@ -50,7 +50,7 @@ class BinarySearchTree{
       }else if(value < currentNode.value){
         currentNode = left;
       }else{
-        return true;
+        return currentNode;
       }
     }
     return false;
@@ -67,7 +67,7 @@ tree.insert(15)
 tree.insert(1)
 console.log(JSON.stringify(traverse(tree.root)));
 
-console.log(tree.lookup(100));
+console.log(tree.lookup(9));
 function traverse(node) {
   const tree = { value: node.value };
   tree.left = node.left === null ? null : traverse(node.left);
