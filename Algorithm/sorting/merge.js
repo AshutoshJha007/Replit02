@@ -42,12 +42,14 @@ function merge(left, right){
         final.push(right[j]);
         j++;
       }
+      break;
     }
     if(right[j] === undefined && left[i] !== undefined){
       while(i < left.length) {
         final.push(left[i]);
         i++;
       }
+      break;
     }
     counter--;
   }
